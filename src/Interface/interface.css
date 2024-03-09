@@ -1,0 +1,79 @@
+.option-modal-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.option-modal-container.show {
+    backdrop-filter: blur(5px);
+}
+
+.option-modal {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    translate: -50% -50%;
+    opacity: 0;
+    pointer-events: none;
+    background: #444444;
+    border-radius: 10px;
+    padding: 20px;
+    transition: all 200ms ease;
+}
+
+.option-modal-container.show .option-modal {
+    top: 50%;
+    opacity: 1;
+    pointer-events: all;
+}
+
+.option-modal-body {
+    display: flex;
+    gap: 30px;
+}
+
+.option-modal-footer {
+    display: flex;
+    justify-content: end;
+    margin-top: 20px;
+}
+
+.option-field {
+    display: flex;
+    flex-direction: column;
+}
+
+.timer {
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    translate: -50%;
+    font-size: 48px;
+    pointer-events: none;
+}
+
+.instructions-container {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    translate: -50%;
+    background: #111111;
+    padding: 30px 50px 15px;
+    border-radius: 10px 10px 0 0;
+    pointer-events: none;
+}
+
+.instructions {
+    display: flex;
+    gap: 30px;
+    margin: 30px 0;
+}
+
+.bottom-line {
+    text-align: center;
+    font-size: 0.8rem;
+    opacity: 0.8;
+}
