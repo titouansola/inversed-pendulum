@@ -53,7 +53,6 @@
     left: 50%;
     translate: -50%;
     font-size: 80px;
-    pointer-events: none;
 }
 
 .instructions-container {
@@ -64,7 +63,6 @@
     background: #111111;
     padding: 30px 50px 15px;
     border-radius: 10px 10px 0 0;
-    pointer-events: none;
 }
 
 .instructions {
