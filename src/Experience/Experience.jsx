@@ -1,4 +1,4 @@
-import { KeyboardControls } from '@react-three/drei'
+import { KeyboardControls, OrbitControls } from '@react-three/drei'
 import { Canvas } from '@react-three/fiber'
 import { Physics } from '@react-three/rapier'
 import { useAtom } from 'jotai'
@@ -6,6 +6,7 @@ import { useMemo } from 'react'
 import { gravityAtom } from '../utils/atoms.js'
 import { WORLD_OFFSET } from '../utils/constants.js'
 import { Interface } from '../Interface/Interface.jsx'
+import { Lights } from './Lights.jsx'
 import { Pendulum } from './Pendulum.jsx'
 import { Track } from './Track.jsx'
 
@@ -19,7 +20,8 @@ export function Experience() {
     const [gravity] = useAtom(gravityAtom);
     //
     return <KeyboardControls map={map}>
-        <Canvas camera={{ position: [0, 3, 15] }}>
+        <Canvas camera={{ position: [0, 3, 15] }} shadows>
+            <Lights />
             <Physics gravity={[0, -gravity, 0]}>
                 <group position-y={WORLD_OFFSET}>
                     <Pendulum />
